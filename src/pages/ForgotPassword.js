@@ -31,20 +31,6 @@ import GoogleButton from 'react-google-button'
 import '../Signin.css';
 
 const ForgotPassword = () => {
-
-    function Copyright(props) {
-        return (
-            <Typography variant="body2" color="text.secondary" align="center" {...props}>
-                {'Copyright © '}
-                <Link color="inherit" style={{ textDecoration: "none" }} href="https://mui.com/">
-                    Bugs Apocalypse
-                </Link>{' '}
-                {new Date().getFullYear()}
-                {'.'}
-            </Typography>
-        );
-    }
-
     const forgotPassword = (email) => {
         firebase.auth().sendPasswordResetEmail(email)
             .then(function () {
@@ -101,9 +87,7 @@ const ForgotPassword = () => {
                                 </Button>
                             </Box>
                         </Card>
-
                     </Box>
-                    <Copyright sx={{ mt: 8, mb: 4 }} />
                 </Container>
             </div>
         </div>

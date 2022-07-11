@@ -34,15 +34,7 @@ const Home = () => {
 
     }
 
-    //Put any page behind login
-    if (!context.user?.uid) {
-        return <Redirect to="/signin" />
-    }
-
     return (
-
-
-
         <Container className='text-center mt-5'>
             <Row className=" mt-5">
                 <Col md="4">

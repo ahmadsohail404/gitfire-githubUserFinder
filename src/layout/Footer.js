@@ -9,7 +9,7 @@ const Footer = () => {
             tag="footer"
             className="text-center bg-dark text-white text-uppercase fixed-bottom p-3"
         >
-            &copy; 2022 | Built with ❤️ by NISB
+            2022 ❤️ SOHAIL
         </Container>
     );
 };

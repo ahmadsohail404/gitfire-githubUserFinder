@@ -1,5 +1,5 @@
 import React from 'react'
-import './PageNotFound.css'
+import '../PageNotFound.css'
 import Link from '@mui/material/Link';
 import {
     Collapse,
@@ -15,17 +15,11 @@ import {
 
 const PageNotFound = () => {
     return (
-        <div className = 'notFound'>
-        <header >404: PAGE NOT FOUND</header>
-        <div class="button2">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            RETURN TO HOMEPAGE
+        <div className='notFoundDiv'>
+            <header >ERROR 404: PAGE NOT FOUND 🥲🔫</header>
+            <br />
+            <Link class="notFound" href="/" variant="body2"></Link>
         </div>
-        </div>
-        
     )
 }
 

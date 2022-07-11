@@ -61,19 +61,6 @@ const Signin = () => {
     handleSignup()
   }
 
-  function Copyright(props) {
-    return (
-      <Typography variant="body2" color="text.secondary" align="center" {...props}>
-        {'Copyright © '}
-        <Link color="inherit" style={{ textDecoration: "none" }} href="https://mui.com/">
-          Bugs Apocalypse
-        </Link>{' '}
-        {new Date().getFullYear()}
-        {'.'}
-      </Typography>
-    );
-  }
-
   const signInWithGoogle = () => {
     const google_provider = new firebase.auth.GoogleAuthProvider();
     firebase.auth().signInWithPopup(google_provider)
@@ -169,65 +156,11 @@ const Signin = () => {
 
             <br />
             <GoogleButton className='mx-auto' label='Sign in with Google' onClick={signInWithGoogle} />
-
           </Box>
-          <Copyright sx={{ mt: 8, mb: 4 }} />
         </Container>
 
       </div>
     </div>
-    // <Container className='text-center mt-5'>
-    //   {/* <Row>
-    //     <Col lg={6} className='offset-lg-3 mt-5'>
-    //       <Card>
-    //         <Form onSubmit={handleSubmit}>
-    //           <CardHeader className=''>SignIn here</CardHeader>
-    //           <CardBody>
-    //             <FormGroup row>
-    //               <Label for='email' sm={3}>
-    //                 Email
-    //               </Label>
-    //               <Col sm={9}>
-    //                 <Input
-    //                   type='email'
-    //                   name='email'
-    //                   id='email'
-    //                   placeholder='provide your email'
-    //                   value={email}
-    //                   onChange={e => setEmail(e.target.value)}
-    //                 />
-    //               </Col>
-    //             </FormGroup>
-    //             <FormGroup row>
-    //               <Label for='password' sm={3}>
-    //                 Password
-    //               </Label>
-    //               <Col sm={9}>
-    //                 <Input
-    //                   type='password'
-    //                   name='password'
-    //                   id='password'
-    //                   placeholder='your password here'
-    //                   value={password}
-    //                   onChange={e => setPassword(e.target.value)}
-    //                 />
-    //               </Col>
-    //             </FormGroup>
-    //           </CardBody>
-    //           <CardFooter>
-    //             <Button type='submit' block color='primary'>
-    //               Sign In
-    //             </Button>
-    //           </CardFooter>
-    //         </Form>
-    //       </Card>
-    //     </Col>
-    //   </Row> */}
-
-    //   <button className="login-with-google-btn" onClick={signInWithGoogle}>
-    //     Sign in with Google
-    //   </button>
-    // </Container>
   );
 
 }

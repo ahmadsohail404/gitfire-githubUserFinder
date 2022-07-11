@@ -14,6 +14,7 @@ import {
 import { Link } from "react-router-dom"
 import { UserContext } from '../context/UserContext';
 import { toast } from 'react-toastify';
+import firebase from "firebase/compat/app";
 
 const Header = () => {
     const context = useContext(UserContext)
@@ -24,7 +25,7 @@ const Header = () => {
 
     return (
         <Navbar color='dark' light expand='md' >
-            <NavbarBrand><Link to="/" className="text-white ms-3" style={{ textDecoration: 'none' }} >Bugs Apocalypse</Link></NavbarBrand>
+            <NavbarBrand><Link to="/" className="text-white ms-3" style={{ textDecoration: 'none' }} >GitFire - Github User Finder</Link></NavbarBrand>
             <NavbarText className='text-white'>
                 {context.user?.email ? context.user.email : ""}
             </NavbarText>
@@ -39,7 +40,8 @@ const Header = () => {
                                     toast("See ya soon❤️",
                                         { type: "success" }
                                     );
-                                }} className="text-white" style={{ cursor: 'pointer' }} >
+                                }
+                                } className="text-white" style={{ cursor: 'pointer' }} >
                                     Logout
                                 </NavLink>
                             </NavItem>
